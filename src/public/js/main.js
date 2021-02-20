@@ -19,7 +19,6 @@ async function ListenPaste() {
 
         img.src = resp.info.videoDetails.thumbnails[3].url;
         const duplicateImg = document.querySelector("img");
-        console.log(duplicateImg)
         if(duplicateImg)
         {
           duplicateImg.remove()

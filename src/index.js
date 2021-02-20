@@ -34,14 +34,14 @@ app.get("/download", async (req, res) => {
   let url = req.query.url;
   let fileName = req.query.fileNm;
   url = JSON.parse(url);
-  console.log(url)
+  console.log(fileName)
   res.header("Content-Disposition", `attachment; filename=${fileName}.mp3`);
 console.log('donwload hit')
-  ytdl(url, {filter:'audioonly' })
+  ytdl(url, {filter:'audioonly'})
     .on("progress", (length, download, totallenght) => {
     })
     .pipe(res);
-});
+}); 
 
 app.listen(process.env.PORT || 3000, () => {
   console.log("port is running on", process.env.PORT);

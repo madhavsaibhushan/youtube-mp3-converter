@@ -25,7 +25,7 @@ async function ListenPaste() {
         }
         document.querySelector(".thumbnail").appendChild(img);
         respElement.innerText = resp.info.videoDetails.title;
-        fileName = resp.info.videoDetails.title;
+        fileName = resp.info.videoDetails.media.song;
       })
     );
   });
@@ -34,6 +34,6 @@ async function ListenPaste() {
 function Submit() {
   const urlElement = document.getElementById("input-url");
   const url = JSON.stringify(urlElement.value);
-  console.log("submit clicked");
+  console.log(fileName);
   window.location.href = `/download?url=${url}&fileNm=${fileName}`;
 }

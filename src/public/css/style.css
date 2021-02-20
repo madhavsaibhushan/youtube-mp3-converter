@@ -1,0 +1,59 @@
+body{
+    background-image: linear-gradient(to right bottom, #f46222, #f75431, #f9463e, #f9364b, #f72558);
+}
+html{
+    height: 100vh;
+    overflow: hidden;  
+    font-family: system-ui !important;  
+}
+
+.wrapper{
+    display: table;
+    position: relative;
+    margin: 10% auto;
+
+}
+.header{
+    color: white;
+    font-family: system-ui;
+    text-align: center;
+    text-shadow: 1px 1px 9px black;
+}
+.wrapper p{
+    text-align: center;
+}
+
+#input-url{
+    width: 100%;
+}
+button .download{
+    margin: 0 auto;
+    background-color:black !important;
+}
+button .button-primary{
+    background-color: black !important;
+}
+.input-button{
+    display: block;
+    text-align: center;
+
+    text-align: center;
+    margin: 23px auto;
+    width: 100%;
+}
+.thumbnail{
+    text-align: center;
+}
+.thumbnail+img{
+
+    margin: 0 auto;
+    box-shadow: 1px 1px 30px black;
+    border-radius: 11px;
+
+}
+footer p{
+    font-family: system-ui !important;  
+    text-align: center;
+    color: white;
+    opacity: 0.7;
+}

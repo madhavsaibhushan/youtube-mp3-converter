@@ -25,7 +25,7 @@ async function ListenPaste() {
         }
         document.querySelector(".thumbnail").appendChild(img);
         respElement.innerText = resp.info.videoDetails.title;
-        fileName = resp.info.videoDetails.media.song;
+        fileName = resp.info.videoDetails.media.song || resp.info.videoDetails.title;
       })
     );
   });

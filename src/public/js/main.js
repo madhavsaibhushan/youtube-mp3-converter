@@ -33,7 +33,6 @@ async function ListenPaste() {
 
 function Submit() {
   const urlElement = document.getElementById("input-url");
-  const url = JSON.stringify(urlElement.value);
-  console.log(fileName);
+  const url = urlElement.value;
   window.location.href = `/download?url=${url}&fileNm=${fileName}`;
 }

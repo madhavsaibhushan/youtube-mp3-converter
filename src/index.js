@@ -30,17 +30,13 @@ app.get("/getInfo", async (req, res) => {
   });
 });
 app.get("/download", async (req, res) => {
-  // res.header('Content-Disposition','attachment, filename="video.mp4"');
   let url = req.query.url;
   let fileName = req.query.fileNm;
-  // url = JSON.parse(url);
-  // console.log('url',url);
   res.set({
     "Content-Disposition": `attachment; filename=${fileName}.mp3`,
     "Content-Type": "audio/mpeg3",
   });
-console.log(res)
-  ytdl(url, { filter: "audioonly" })
+  ytdl(req.query.url, { filter: "audioonly" })
     .on("progress", (length, download, totallenght) => {})
     .pipe(res);
 });

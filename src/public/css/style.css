@@ -23,21 +23,27 @@ html{
     text-align: center;
 }
 
+#resp{
+    text-shadow: 2px 1px 3px black;
+    color: lightcyan;
+}
 #input-url{
     width: 100%;
 }
 button .download{
     margin: 0 auto;
     background-color:black !important;
+    box-shadow: 1px 1px 12px black !important;
 }
 button .button-primary{
     background-color: black !important;
+    box-shadow: 1px 1px 12px black;
 }
 .input-button{
     display: block;
     text-align: center;
 
-    text-align: center;
+    text-align: center; 
     margin: 23px auto;
     width: 100%;
 }

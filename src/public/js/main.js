@@ -6,19 +6,25 @@ var fileName;
 let urlElement = document.getElementById("input-url");
 var img = document.createElement("img");
 document.addEventListener("input", (event) => {
-  console.log("called");
   ListenPaste(event.target.value);
 });
 async function ListenPaste() {
   const urlElement = document.getElementById("input-url");
+  const respElement = document.getElementById("resp");
+  const duplicateImg = document.querySelector("img");
+  if(duplicateImg){
+    duplicateImg.remove()
+    respElement.innerText=''
+  }
+  const loader=document.createElement('div')
+  loader.innerHTML='<div class="loader">Loading...</div>'
   const url = urlElement.value;
+respElement.appendChild(loader)
   fetch(`/getInfo?url=${url}`).then((resp) => {
     console.log(
       resp.json().then((resp) => {
-        const respElement = document.getElementById("resp");
-
+        loader.remove()
         img.src = resp.info.videoDetails.thumbnails[3].url;
-        const duplicateImg = document.querySelector("img");
         if(duplicateImg)
         {
           duplicateImg.remove()

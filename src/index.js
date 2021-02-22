@@ -4,7 +4,6 @@ var hbs = require("hbs");
 var path = require("path");
 const fs = require("fs");
 const ytdl = require("ytdl-core");
-const { format } = require("path");
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "./public")));
@@ -24,7 +23,6 @@ app.get("/getInfo", async (req, res) => {
     });
     return;
   });
-
   res.send({
     info: info,
   });
